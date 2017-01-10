@@ -1,0 +1,214 @@
+
+<!DOCTYPE html>
+<html lang="english">
+<head>
+  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" type="text/css" href="https://vladcalin.github.io/theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="https://vladcalin.github.io/theme/pygments/github.min.css">
+  <link rel="stylesheet" type="text/css" href="https://vladcalin.github.io/theme/font-awesome/css/font-awesome.min.css">
+
+
+    <link href="https://vladcalin.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Vlad's blog Atom">
+
+
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="" />
+
+
+<meta name="author" content="Vlad Calin" />
+<meta name="description" content="Over the past few years, the Python programming language gained a huge popularity boost and its community grew faster than ever. With this growth, a lot of tools appeared that help the community keep things organized and accessible. In this article I am going to provide a short list of …" />
+<meta name="keywords" content="project, python, tips">
+<meta property="og:site_name" content="Vlad's blog"/>
+<meta property="og:title" content="What every Python project should have"/>
+<meta property="og:description" content="Over the past few years, the Python programming language gained a huge popularity boost and its community grew faster than ever. With this growth, a lot of tools appeared that help the community keep things organized and accessible. In this article I am going to provide a short list of …"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://vladcalin.github.io/what-every-python-project-should-have.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2017-01-09 20:21:00+01:00"/>
+<meta property="article:modified_time" content="2017-01-10 11:54:00+01:00"/>
+<meta property="article:author" content="https://vladcalin.github.io/author/vlad-calin.html">
+<meta property="article:section" content="Python"/>
+<meta property="article:tag" content="project"/>
+<meta property="article:tag" content="python"/>
+<meta property="article:tag" content="tips"/>
+<meta property="og:image" content="/images/profile.jpg">
+
+  <title>Vlad's blog &ndash; What every Python project should have</title>
+
+</head>
+<body>
+  <aside>
+    <div>
+      <a href="https://vladcalin.github.io">
+        <img src="/images/profile.jpg" alt="" title="">
+      </a>
+      <h1><a href="https://vladcalin.github.io"></a></h1>
+
+
+      <nav>
+        <ul class="list">
+          <li><a href="https://vladcalin.github.io/pages/about.html#about">About</a></li>
+          <li><a href="https://vladcalin.github.io/pages/projects.html#projects">Projects</a></li>
+
+        </ul>
+      </nav>
+
+      <ul class="social">
+        <li><a class="sc-linkedin" href="https://www.linkedin.com/in/calinstefanvlad" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+        <li><a class="sc-github" href="https://github.com/vladcalin" target="_blank"><i class="fa fa-github"></i></a></li>
+      </ul>
+    </div>
+
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="https://vladcalin.github.io">    Home
+</a>
+
+      <a href="/archives.html">Archives</a>
+      <a href="/categories.html">Categories</a>
+      <a href="/tags.html">Tags</a>
+
+      <a href="https://vladcalin.github.io/feeds/all.atom.xml">    Atom
+</a>
+
+    </nav>
+
+<article class="single">
+  <header>
+    <h1 id="what-every-python-project-should-have">What every Python project should have</h1>
+    <p>
+          Posted on Mon 09 January 2017 in <a href="https://vladcalin.github.io/category/python.html">Python</a>
+
+
+    </p>
+  </header>
+
+
+  <div>
+    <p>Over the past few years, the Python programming language gained a huge popularity boost
+and its community grew faster than ever. With this growth, a lot of tools appeared that
+help the community keep things organized and accessible. In this article I am going
+to provide a short list of items every Python project should have in order to be
+accessible and maintainable.</p>
+<h2>requirements.txt</h2>
+<p>Firstly, the <code>requirements.txt</code> file is crucial for the sanity of those who want to install your project.
+It is basically a text file which contains the dependencies to be installed via <code>pip</code>, one per line. </p>
+<p>It is that simple. And that powerful. </p>
+<p>You can also have multiple <code>requirements.txt</code> files that serve different purposes. For example,
+you can have a <code>requirements.txt</code> that have general dependencies listed that your project need to run, a <code>requirements_dev.txt</code> where
+you have listed some dependencies that enable some debugging mechanisms and a <code>requirements_docs.txt</code> that has listed some
+requirements that are used when generating the documentation (such as <code>Sphinx</code> and the desired <code>theme</code>).</p>
+<h2>setup.py</h2>
+<p>A <code>setup.py</code> file is crucial for your project if you want to be installable via <code>pip</code>. It is easy to write, very configurable and takes care of a lot of things such as importing, project metadata, updating the sources, installing the dependencies, and much more.</p>
+<p>You can check the <a href="https://setuptools.readthedocs.io/en/latest/">setuptools</a> documentation for more information on this. </p>
+<h2>A proper structure</h2>
+<p>The project structure is crucial. With a well organized structure, it will e easier to organize things, locate certain
+source files and encourages other people to contribute.</p>
+<p>The root project directory should have a structure similar to</p>
+<div class="highlight"><pre><span></span>root/
+        docs/
+        tests/
+        mymodule/
+        scripts/
+        requirements.txt
+        setup.py
+        README
+        LICENSE
+</pre></div>
+
+
+<p>Of course, this is not the only way to organize your project, but this certainly is the most
+used template.</p>
+<h2>Tests</h2>
+<p>Unit testing is crucial for your project. It allows you to be confident in the stability
+of your code. I recommend the <code>unittest</code> module for this job as it is built in and
+is flexible enough to get the job done right. </p>
+<p>There are also other libraries that can be used for testing your project, such as
+<code>test.py</code> or <code>nose</code>.</p>
+<h2>Documentation</h2>
+<p>If you develop a project, I am sure that you don't write it just for yourself. Other people
+must know how to use your project properly. And even if you write the project only for yourself
+(although beats the purpose of open source), after a while of not developing it and when you
+come back to it, you will surely not remember anything that is going on in your code (or API).</p>
+<p>So, in order to achieve a reusable code base, you should:</p>
+<ul>
+<li>design a sane API that is easy to use and remember</li>
+<li>the same sane API should be flexible enough to allow easy configurations</li>
+<li>document the most relevant use-cases</li>
+<li>don't try to fit all cases. It should fit only the most usual 80% of cases.</li>
+</ul>
+<p>In order to properly document your code, you should use a tool specialized for that job, such
+as <code>Sphinx</code> or <code>mkdocs</code>, so that you can generate nice-looking documentation with proper
+reference links by writing in a popular markup language designed just for that (rst or markdown).</p>
+<h2>Conclusion</h2>
+<p>After you familiarize yourself with the topics described above, you will surely be able to
+produce nice structured projects and libraries that comply to the community standards. And 
+don't forget to ALWAYS use PEP-8!</p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="https://vladcalin.github.io/tag/project.html">project</a>
+      <a href="https://vladcalin.github.io/tag/python.html">python</a>
+      <a href="https://vladcalin.github.io/tag/tips.html">tips</a>
+    </p>
+  </div>
+
+
+
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'vladcalin-github-io';
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>
+        Please enable JavaScript to view comments.
+
+</noscript>
+</article>
+
+    <footer>
+<p>&copy; Vlad Calin </p>
+<p>    Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a>
+</p>    </footer>
+  </main>
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-82264971-2', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Vlad's blog ",
+  "url" : "https://vladcalin.github.io",
+  "image": "/images/profile.jpg",
+  "description": "When every morning starts with a coffee and a hello world"
+}
+</script>
+</body>
+</html>

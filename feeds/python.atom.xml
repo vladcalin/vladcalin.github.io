@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Vlad's blog - Python</title><link href="https://vladcalin.github.io/" rel="alternate"></link><link href="https://vladcalin.github.io/feeds/python.atom.xml" rel="self"></link><id>https://vladcalin.github.io/</id><updated>2017-01-10T11:54:00+01:00</updated><entry><title>What every Python project should have</title><link href="https://vladcalin.github.io/what-every-python-project-should-have.html" rel="alternate"></link><published>2017-01-09T20:21:00+01:00</published><updated>2017-01-10T11:54:00+01:00</updated><author><name>Vlad Calin</name></author><id>tag:vladcalin.github.io,2017-01-09:/what-every-python-project-should-have.html</id><summary type="html">&lt;p&gt;Over the past few years, the Python programming language gained a huge popularity boost
+and its community grew faster than ever. With this growth, a lot of tools appeared that
+help the community keep things organized and accessible. In this article I am going
+to provide a short list of …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Over the past few years, the Python programming language gained a huge popularity boost
+and its community grew faster than ever. With this growth, a lot of tools appeared that
+help the community keep things organized and accessible. In this article I am going
+to provide a short list of items every Python project should have in order to be
+accessible and maintainable.&lt;/p&gt;
+&lt;h2&gt;requirements.txt&lt;/h2&gt;
+&lt;p&gt;Firstly, the &lt;code&gt;requirements.txt&lt;/code&gt; file is crucial for the sanity of those who want to install your project.
+It is basically a text file which contains the dependencies to be installed via &lt;code&gt;pip&lt;/code&gt;, one per line. &lt;/p&gt;
+&lt;p&gt;It is that simple. And that powerful. &lt;/p&gt;
+&lt;p&gt;You can also have multiple &lt;code&gt;requirements.txt&lt;/code&gt; files that serve different purposes. For example,
+you can have a &lt;code&gt;requirements.txt&lt;/code&gt; that have general dependencies listed that your project need to run, a &lt;code&gt;requirements_dev.txt&lt;/code&gt; where
+you have listed some dependencies that enable some debugging mechanisms and a &lt;code&gt;requirements_docs.txt&lt;/code&gt; that has listed some
+requirements that are used when generating the documentation (such as &lt;code&gt;Sphinx&lt;/code&gt; and the desired &lt;code&gt;theme&lt;/code&gt;).&lt;/p&gt;
+&lt;h2&gt;setup.py&lt;/h2&gt;
+&lt;p&gt;A &lt;code&gt;setup.py&lt;/code&gt; file is crucial for your project if you want to be installable via &lt;code&gt;pip&lt;/code&gt;. It is easy to write, very configurable and takes care of a lot of things such as importing, project metadata, updating the sources, installing the dependencies, and much more.&lt;/p&gt;
+&lt;p&gt;You can check the &lt;a href="https://setuptools.readthedocs.io/en/latest/"&gt;setuptools&lt;/a&gt; documentation for more information on this. &lt;/p&gt;
+&lt;h2&gt;A proper structure&lt;/h2&gt;
+&lt;p&gt;The project structure is crucial. With a well organized structure, it will e easier to organize things, locate certain
+source files and encourages other people to contribute.&lt;/p&gt;
+&lt;p&gt;The root project directory should have a structure similar to&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;root/
+        docs/
+        tests/
+        mymodule/
+        scripts/
+        requirements.txt
+        setup.py
+        README
+        LICENSE
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Of course, this is not the only way to organize your project, but this certainly is the most
+used template.&lt;/p&gt;
+&lt;h2&gt;Tests&lt;/h2&gt;
+&lt;p&gt;Unit testing is crucial for your project. It allows you to be confident in the stability
+of your code. I recommend the &lt;code&gt;unittest&lt;/code&gt; module for this job as it is built in and
+is flexible enough to get the job done right. &lt;/p&gt;
+&lt;p&gt;There are also other libraries that can be used for testing your project, such as
+&lt;code&gt;test.py&lt;/code&gt; or &lt;code&gt;nose&lt;/code&gt;.&lt;/p&gt;
+&lt;h2&gt;Documentation&lt;/h2&gt;
+&lt;p&gt;If you develop a project, I am sure that you don't write it just for yourself. Other people
+must know how to use your project properly. And even if you write the project only for yourself
+(although beats the purpose of open source), after a while of not developing it and when you
+come back to it, you will surely not remember anything that is going on in your code (or API).&lt;/p&gt;
+&lt;p&gt;So, in order to achieve a reusable code base, you should:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;design a sane API that is easy to use and remember&lt;/li&gt;
+&lt;li&gt;the same sane API should be flexible enough to allow easy configurations&lt;/li&gt;
+&lt;li&gt;document the most relevant use-cases&lt;/li&gt;
+&lt;li&gt;don't try to fit all cases. It should fit only the most usual 80% of cases.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In order to properly document your code, you should use a tool specialized for that job, such
+as &lt;code&gt;Sphinx&lt;/code&gt; or &lt;code&gt;mkdocs&lt;/code&gt;, so that you can generate nice-looking documentation with proper
+reference links by writing in a popular markup language designed just for that (rst or markdown).&lt;/p&gt;
+&lt;h2&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;After you familiarize yourself with the topics described above, you will surely be able to
+produce nice structured projects and libraries that comply to the community standards. And 
+don't forget to ALWAYS use PEP-8!&lt;/p&gt;</content><category term="project"></category><category term="python"></category><category term="tips"></category></entry></feed>
