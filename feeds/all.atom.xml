@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Vlad's blog</title><link href="https://vladcalin.github.io/" rel="alternate"></link><link href="https://vladcalin.github.io/feeds/all.atom.xml" rel="self"></link><id>https://vladcalin.github.io/</id><updated>2017-02-06T15:15:00+01:00</updated><entry><title>What is microservices?</title><link href="https://vladcalin.github.io/what-is-microservices.html" rel="alternate"></link><published>2017-02-06T15:15:00+01:00</published><updated>2017-02-06T15:15:00+01:00</updated><author><name>Vlad Calin</name></author><id>tag:vladcalin.github.io,2017-02-06:/what-is-microservices.html</id><summary type="html">&lt;p&gt;The title is a reference to the famous &lt;em&gt;"What is drugs?"&lt;/em&gt; news footage that is out there on the internet (if you don't know it, you can view it
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Vlad's blog</title><link href="https://vladcalin.github.io/" rel="alternate"></link><link href="https://vladcalin.github.io/feeds/all.atom.xml" rel="self"></link><id>https://vladcalin.github.io/</id><updated>2017-02-27T20:48:00+01:00</updated><entry><title>What is microservices?</title><link href="https://vladcalin.github.io/what-is-microservices.html" rel="alternate"></link><published>2017-02-06T15:15:00+01:00</published><updated>2017-02-06T15:15:00+01:00</updated><author><name>Vlad Calin</name></author><id>tag:vladcalin.github.io,2017-02-06:/what-is-microservices.html</id><summary type="html">&lt;p&gt;The title is a reference to the famous &lt;em&gt;"What is drugs?"&lt;/em&gt; news footage that is out there on the internet (if you don't know it, you can view it
 &lt;a href="https://youtu.be/kan_FWhjrMw?t=37s"&gt;here&lt;/a&gt;).&lt;/p&gt;
 &lt;p&gt;So, what is microservice?&lt;/p&gt;
 &lt;p&gt;I am sure that you heard this term and wondered why everybody is talking about it …&lt;/p&gt;</summary><content type="html">&lt;p&gt;The title is a reference to the famous &lt;em&gt;"What is drugs?"&lt;/em&gt; news footage that is out there on the internet (if you don't know it, you can view it
@@ -100,7 +100,7 @@ reference links by writing in a popular markup language designed just for that (
 &lt;h2&gt;Conclusion&lt;/h2&gt;
 &lt;p&gt;After you familiarize yourself with the topics described above, you will surely be able to
 produce nice structured projects and libraries that comply to the community standards. And 
-don't forget to ALWAYS use PEP-8!&lt;/p&gt;</content><category term="project"></category><category term="python"></category><category term="tips"></category></entry><entry><title>Finally I made myself a blog</title><link href="https://vladcalin.github.io/finally-i-made-myself-a-blog.html" rel="alternate"></link><published>2017-01-07T20:21:00+01:00</published><updated>2017-01-07T22:37:00+01:00</updated><author><name>Vlad Calin</name></author><id>tag:vladcalin.github.io,2017-01-07:/finally-i-made-myself-a-blog.html</id><summary type="html">&lt;p&gt;There is no secret that having a blog is no big deal. Nowdays, everybody can create and host
+don't forget to ALWAYS use PEP-8!&lt;/p&gt;</content><category term="project"></category><category term="python"></category><category term="tips"></category></entry><entry><title>Finally I made myself a blog</title><link href="https://vladcalin.github.io/finally-i-made-myself-a-blog.html" rel="alternate"></link><published>2017-01-07T20:21:00+01:00</published><updated>2017-02-27T20:48:00+01:00</updated><author><name>Vlad Calin</name></author><id>tag:vladcalin.github.io,2017-01-07:/finally-i-made-myself-a-blog.html</id><summary type="html">&lt;p&gt;There is no secret that having a blog is no big deal. Nowdays, everybody can create and host
 a blog with ease. So I though... why shouldn't I have a blog?&lt;/p&gt;
 &lt;p&gt;I always wanted to write about different things that bug or incite me, write a couple
 of words about …&lt;/p&gt;</summary><content type="html">&lt;p&gt;There is no secret that having a blog is no big deal. Nowdays, everybody can create and host
@@ -116,6 +116,8 @@ choices:&lt;/p&gt;
 &lt;li&gt;using Wordpress&lt;/li&gt;
 &lt;li&gt;using Jekyll&lt;/li&gt;
 &lt;li&gt;using Pelican&lt;/li&gt;
+&lt;li&gt;using Hugo&lt;/li&gt;
+&lt;li&gt;using Pelican again&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Each of these tools have their strengths and weaknesses. &lt;/p&gt;
 &lt;h3&gt;Blogger&lt;/h3&gt;
@@ -149,4 +151,31 @@ that there has to be something similar for Python.&lt;/p&gt;
 Python. After the usual &lt;code&gt;pip install ...&lt;/code&gt; thingy, everything was ready. I followed their tutorial
 and found out that everything was so easy... and free... and from the comfort of my own hardware, 
 not on the platform of some corporation. It felt right, it was easy, it was fast.&lt;/p&gt;
-&lt;p&gt;And now, I am using this method of writing a blog and I sincerely recommend it!&lt;/p&gt;</content><category term="blog"></category><category term="python"></category></entry></feed>
+&lt;h3&gt;Hugo&lt;/h3&gt;
+&lt;p&gt;After a while of playing with Pelican I searched for alternatives and I 
+found about Hugo, another static site generator, but this time it was 
+written in Golang. I said to myself that I should give it a chance. A huge plus
+was the huge theme repository that looked better than the ones Pelican provided.&lt;/p&gt;
+&lt;p&gt;I downloaded the Hugo executable, created the structure and started to 
+search through the themes until I found one that I liked. I used that theme, 
+wrote some dummy articles and everything was fine.&lt;/p&gt;
+&lt;p&gt;Until the next day, when I decided to trigger a build on other laptop... Long 
+story short, everything failed violently and burst into flames because I attempted 
+to use the reST syntax, instead of the default Markdown syntax. I later found 
+that the reST support is at an early stage, very experimental and it attempts
+to run &lt;code&gt;rst2html.py&lt;/code&gt; for whatever Python distribution it finds on your local
+machine (and the weird part is that I had &lt;code&gt;docutils&lt;/code&gt; installed, therefore 
+the &lt;code&gt;rst2html.py&lt;/code&gt; script was where it was supposed to be, but that Go executable 
+was attempting to execute &lt;code&gt;C:\path\to\rst2html.py&lt;/code&gt; as an executable, 
+without the use of the Python interpreter.. what the actual Hell).&lt;/p&gt;
+&lt;p&gt;After that, I thought that it wasn't a big deal, I could write my articles 
+in Markdown.&lt;/p&gt;
+&lt;p&gt;But after a few minutes, I researched a little and wanted to do some changes
+in the theme templates so that I could customize some things. Then I realized,
+when looking over those Go templates that ... damn ... that template language 
+was ugly... I certainly liked the Jinja2 templates Pelican uses more than 
+the templating language Hugo was using. But this is just my personal opinion 
+clearly biased towards Python, Pelican and Jinja2.&lt;/p&gt;
+&lt;h3&gt;Back to Pelican&lt;/h3&gt;
+&lt;p&gt;After the big Hugo disappointment, I decided to go back to using Pelican. 
+In the end, Python is not going to disappoint me, at least not yet.&lt;/p&gt;</content><category term="blog"></category><category term="python"></category></entry></feed>
