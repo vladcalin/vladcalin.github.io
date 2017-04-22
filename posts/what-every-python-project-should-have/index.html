@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<meta name="description" content="Calin Vlad&#39;s Blog">
+<meta name="keywords" content="blog,vlad,calin,python,thought,uaic,code,github">
+
+<base href="https://vladcalin.github.io">
+
+<title>Vlad Calin&#39;s personal page</title>
+
+<meta name="generator" content="Hugo 0.20.2" />
+
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400|Roboto+Slab:400,700|Roboto:300,300i,400,400i,500,500i,700,700i">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://vladcalin.github.io/css/main.css">
+
+
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="theme-color" content="#ffffff">
+
+</head>
+<body lang="en-US">
+<div class="container">
+
+
+<header class="row text-left title">
+  <h1 class="title">What every Python project should have</h1>
+</header>
+<section id="category-pane" class="row meta">
+  
+  <div class="col-md-12">
+    <h6 class="text-left meta">
+      PUBLISHED ON JAN 01, 10017 
+      
+      
+      — 
+      
+      
+      <a class="meta" href="/categories/python">PYTHON</a>
+      
+      
+    </h6>
+  </div>
+  
+</section>
+<section id="content-pane" class="row">
+  <div class="col-md-12 text-justify content">
+    
+
+<p>Over the past few years, the Python programming language gained a huge popularity boost
+and its community grew faster than ever. With this growth, a lot of tools appeared that
+help the community keep things organized and accessible. In this article I am going
+to provide a short list of items every Python project should have in order to be
+accessible and maintainable.</p>
+
+<h2 id="requirements-txt">requirements.txt</h2>
+
+<p>Firstly, the <code>requirements.txt</code> file is crucial for the sanity of those who want to install your project.
+It is basically a text file which contains the dependencies to be installed via <code>pip</code>, one per line.</p>
+
+<p>It is that simple. And that powerful.</p>
+
+<p>You can also have multiple <code>requirements.txt</code> files that serve different purposes. For example,
+you can have a <code>requirements.txt</code> that have general dependencies listed that your project need to run, a <code>requirements_dev.txt</code> where
+you have listed some dependencies that enable some debugging mechanisms and a <code>requirements_docs.txt</code> that has listed some
+requirements that are used when generating the documentation (such as <code>Sphinx</code> and the desired <code>theme</code>).</p>
+
+<h2 id="setup-py">setup.py</h2>
+
+<p>A <code>setup.py</code> file is crucial for your project if you want to be installable via <code>pip</code>. It is easy to write, very configurable and takes care of a lot of things such as importing, project metadata, updating the sources, installing the dependencies, and much more.</p>
+
+<p>You can check the <a href="https://setuptools.readthedocs.io/en/latest/">setuptools</a> documentation for more information on this.</p>
+
+<h2 id="a-proper-structure">A proper structure</h2>
+
+<p>The project structure is crucial. With a well organized structure, it will e easier to organize things, locate certain
+source files and encourages other people to contribute.</p>
+
+<p>The root project directory should have a structure similar to</p>
+
+<pre><code>root/
+        docs/
+        tests/
+        mymodule/
+        scripts/
+        requirements.txt
+        setup.py
+        README
+        LICENSE
+</code></pre>
+
+<p>Of course, this is not the only way to organize your project, but this certainly is the most
+used template.</p>
+
+<h2 id="tests">Tests</h2>
+
+<p>Unit testing is crucial for your project. It allows you to be confident in the stability
+of your code. I recommend the <code>unittest</code> module for this job as it is built in and
+is flexible enough to get the job done right.</p>
+
+<p>There are also other libraries that can be used for testing your project, such as
+<code>test.py</code> or <code>nose</code>.</p>
+
+<h2 id="documentation">Documentation</h2>
+
+<p>If you develop a project, I am sure that you don&rsquo;t write it just for yourself. Other people
+must know how to use your project properly. And even if you write the project only for yourself
+(although beats the purpose of open source), after a while of not developing it and when you
+come back to it, you will surely not remember anything that is going on in your code (or API).</p>
+
+<p>So, in order to achieve a reusable code base, you should:</p>
+
+<ul>
+<li>design a sane API that is easy to use and remember</li>
+<li>the same sane API should be flexible enough to allow easy configurations</li>
+<li>document the most relevant use-cases</li>
+<li>don&rsquo;t try to fit all cases. It should fit only the most usual 80% of cases.</li>
+</ul>
+
+<p>In order to properly document your code, you should use a tool specialized for that job, such
+as <code>Sphinx</code> or <code>mkdocs</code>, so that you can generate nice-looking documentation with proper
+reference links by writing in a popular markup language designed just for that (rst or markdown).</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>After you familiarize yourself with the topics described above, you will surely be able to
+produce nice structured projects and libraries that comply to the community standards. And
+don&rsquo;t forget to ALWAYS use PEP-8!</p>
+
+  </div>
+</section>
+<section id="tag-pane" class="row meta">
+  
+  <div class="col-md-12">
+    <h6 class="text-right meta">
+      
+      
+      TAGS: 
+      
+      
+      <a class="meta" href="/tags/python">PYTHON</a>, 
+      
+      <a class="meta" href="/tags/thoughts">THOUGHTS</a>
+      
+      
+    </h6>
+  </div>
+  
+</section>
+
+
+
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'vladcalin-github-io';
+    var disqus_identifier = 'https:\/\/vladcalin.github.io\/posts\/what-every-python-project-should-have\/';
+    var disqus_title = 'What every Python project should have';
+    var disqus_url = 'https:\/\/vladcalin.github.io\/posts\/what-every-python-project-should-have\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+<section id="menu-pane" class="row menu text-center">
+  
+  
+  <span><a class="menu-item" href="https://vladcalin.github.io/posts/finally-i-made-myself-a-blog/">&lt; prev | </a></span>
+  
+  
+  <span><a class="menu-item" href="/posts">posts</a></span>
+  
+  
+  <span><a class="menu-item" href="https://vladcalin.github.io/posts/what-is-microservices/"> | next &gt;</a></span>
+  
+  
+  <h4 class="text-center"><a class="menu-item" href="https://vladcalin.github.io">home</a></h4>
+</section>
+
+
+
+<footer class="row text-center footer">
+  <hr />
+  
+  <h6 class="text-center copyright">© 2017. Calin Stefan-Vlad. <a href="http://creativecommons.org/licenses/by/3.0/">Some Rights Reserved</a>.</h6>
+  
+  <h6 class="text-center powered">Powered by <a href="https://gohugo.io/">Hugo</a> &amp; <a href="https://github.com/shenoybr/hugo-goa">Goa</a>.</h6>
+  
+  
+</footer>
+
+</div>
+
+
+
+
+
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-82264971-2', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
+
+

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<meta name="description" content="Calin Vlad&#39;s Blog">
+<meta name="keywords" content="blog,vlad,calin,python,thought,uaic,code,github">
+
+<base href="https://vladcalin.github.io">
+
+<title>Vlad Calin&#39;s personal page</title>
+
+<meta name="generator" content="Hugo 0.20.2" />
+
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400|Roboto+Slab:400,700|Roboto:300,300i,400,400i,500,500i,700,700i">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://vladcalin.github.io/css/main.css">
+
+
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="theme-color" content="#ffffff">
+
+</head>
+<body lang="en-US">
+<div class="container">
+
+
+<header class="row text-left title">
+  <h1 class="title">Finally I made myself a blog</h1>
+</header>
+<section id="category-pane" class="row meta">
+  
+  <div class="col-md-12">
+    <h6 class="text-left meta">
+      PUBLISHED ON JAN 01, 7017 
+      
+      
+      — 
+      
+      
+      <a class="meta" href="/categories/thoughts">THOUGHTS</a>
+      
+      
+    </h6>
+  </div>
+  
+</section>
+<section id="content-pane" class="row">
+  <div class="col-md-12 text-justify content">
+    
+
+<p>There is no secret that having a blog is no big deal. Nowadays, everybody can create and host
+a blog with ease. So I though&hellip; why shouldn&rsquo;t I have a blog?</p>
+
+<p>I always wanted to write about different things that bug or incite me, write a couple
+of words about some interesting things I do or see other people do, offer some tips
+about the problems that every programmer once had, etc.</p>
+
+<p>Over the past few days, I searched a method to create a free blog without any major
+complications and drama. I researched a little and I tried some of the most popular
+choices:</p>
+
+<ul>
+<li>using Blogger (Google&rsquo;s platform for blogging)</li>
+<li>using Wordpress</li>
+<li>using Jekyll</li>
+<li>using Pelican</li>
+<li>using Hugo</li>
+</ul>
+
+<p>Each of these tools have their strengths and weaknesses.</p>
+
+<h3 id="blogger">Blogger</h3>
+
+<p>My first choice was blogger. Why? Because Google owns us, of course.</p>
+
+<p>Joking aside, it came very easy to start a blog using their platform, as I use Google Chrome as
+my main browser and I am logged in with my GMail account.</p>
+
+<p>The main advantage was that it was easy to start a blog from scratch and publish the first post.
+But that was not enough for me. The lack of customization for my blog made me reconsider my choice
+and look further for alternatives. More precisely, they have just a bunch of available themes
+and they all look &hellip;  let&rsquo;s just say, not appealing. I had to find something that could be easily
+customizable without loosing its functionality.</p>
+
+<h3 id="wordpress">Wordpress</h3>
+
+<p>After the Blogger dissapointment, I moved on to Wordpress, the great platform for blogging.
+I created an account, I created a blog, I created a new post, published it&hellip; but I knew something
+was missing&hellip; It was all so complicated, everything was so customizable with so many options that
+I was losing myself in those details.</p>
+
+<p>The next day when I wanted to check out how everything is going, the browser started to crash when I
+was accessing their site with an &ldquo;Out of memory&rdquo; error. That was unpleasant and frustrating as I was
+unable to access the platform. I had to find something else.</p>
+
+<h3 id="jekyll">Jekyll</h3>
+
+<p>After a while, I heard about some static site generators. I knew, in essence, what they were because I
+used Sphinx to convert RST markup to Python documentation, but I never actually got in touch with
+other static site generators other than that. With one search on Google, I found this little tool
+named Jekyll (an odd name, to be honest). I followed all their steps in the tutorial and I was
+able to generate a mini-blog with a hello world. But I didn&rsquo;t quite like it because I had to install
+a bunch of new packages (ruby, gem, some other packages that I had to install because
+of some weird errors) just to run Jekyll and generate some HTML pages. Being a Python developer, I said
+that there has to be something similar for Python.</p>
+
+<h3 id="pelican">Pelican</h3>
+
+<p>After searching for a few minutes, I stumbled upon <strong>Pelican</strong> - a static site generator written in
+Python. After the usual <code>pip install ...</code> thingy, everything was ready. I followed their tutorial
+and found out that everything was so easy&hellip; and free&hellip; and from the comfort of my own hardware,
+not on the platform of some corporation. It felt right, it was easy, it was fast.</p>
+
+<p>And now, I am using this method of writing a blog and I sincerely recommend it!</p>
+
+<h3 id="hugo">Hugo</h3>
+
+<p>After a while of playing with Pelican I searched for alternatives and
+I found about Hugo, another static site generator, but this time it
+was written in Golang. I said to myself that I should give it a chance.
+ A huge plus was the huge theme repository that looked better than the
+ ones Pelican provided. I downloaded the Hugo executable, created the
+ structure and started to search through the themes until I found one
+ that I liked. I used that theme, wrote some dummy articles and everything
+ was fine.
+Until the next day, when I decided to trigger a build on other laptop&hellip;
+Long story short, everything failed violently and burst into flames because
+I attempted to use the reST syntax, instead of the default Markdown syntax.
+ I later found that the reST support is at an early stage, very experimental and it attempts to run rst2html.py for whatever Python distribution it finds on your local machine (and the weird part is that I had docutils installed, therefore the rst2html.py script was where it was supposed to be, but that Go executable was attempting to execute C:\path\to\rst2html.py as an executable, without the use of the Python interpreter.. what the actual Hell).
+After that, I thought that it wasn&rsquo;t a big deal, I could write my articles
+ in Markdown.
+But after a few minutes, I researched a little and wanted to do some
+changes in the theme templates so that I could customize some things.
+Then I realized, when looking over those Go templates that &hellip; damn &hellip;
+that template language was ugly&hellip; I certainly liked the Jinja2 templates
+Pelican uses more than the templating language Hugo was using. But this
+is just my personal opinion clearly biased towards Python, Pelican and
+Jinja2.</p>
+
+<h3 id="back-to-pelican">Back to Pelican</h3>
+
+<p>After the big Hugo disappointment, I decided to go back to using
+Pelican. In the end, Python is not going to disappoint me, at least
+not yet.</p>
+
+<h3 id="back-to-hugo">Back to Hugo</h3>
+
+<p>After a while, Pelican disappointed me: I just couldn&rsquo;t find a theme
+that looked nice from my point of view. I found a bunch but they were very
+outdated (didn&rsquo;t even work with the latest version of Pelican) and the
+last update was at least one year ago while they had open unresolved
+issues. In conclusion, they seemed abandoned and incompatible with
+the latest version of Pelican.</p>
+
+<p>So, I decided to give Hugo another chance. This time I will use Markdown
+for my posts and I hope there will not be any issues with the build and
+publish process. After spending a whole day trying different themes,
+I settled down to one, converted all my posts to markdown and updatet
+my blog. Let&rsquo;s hope this is the final change :)</p>
+
+  </div>
+</section>
+<section id="tag-pane" class="row meta">
+  
+  <div class="col-md-12">
+    <h6 class="text-right meta">
+      
+      
+      TAGS: 
+      
+      
+      <a class="meta" href="/tags/blog">BLOG</a>, 
+      
+      <a class="meta" href="/tags/thoughts">THOUGHTS</a>
+      
+      
+    </h6>
+  </div>
+  
+</section>
+
+
+
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'vladcalin-github-io';
+    var disqus_identifier = 'https:\/\/vladcalin.github.io\/posts\/finally-i-made-myself-a-blog\/';
+    var disqus_title = 'Finally I made myself a blog';
+    var disqus_url = 'https:\/\/vladcalin.github.io\/posts\/finally-i-made-myself-a-blog\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+<section id="menu-pane" class="row menu text-center">
+  
+  
+  
+  <span><a class="menu-item" href="/posts">posts</a></span>
+  
+  
+  <span><a class="menu-item" href="https://vladcalin.github.io/posts/what-every-python-project-should-have/"> | next &gt;</a></span>
+  
+  
+  <h4 class="text-center"><a class="menu-item" href="https://vladcalin.github.io">home</a></h4>
+</section>
+
+
+
+<footer class="row text-center footer">
+  <hr />
+  
+  <h6 class="text-center copyright">© 2017. Calin Stefan-Vlad. <a href="http://creativecommons.org/licenses/by/3.0/">Some Rights Reserved</a>.</h6>
+  
+  <h6 class="text-center powered">Powered by <a href="https://gohugo.io/">Hugo</a> &amp; <a href="https://github.com/shenoybr/hugo-goa">Goa</a>.</h6>
+  
+  
+</footer>
+
+</div>
+
+
+
+
+
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-82264971-2', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
+
+

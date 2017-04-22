@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog on Vlad Calin&#39;s personal page</title>
+    <link>https://vladcalin.github.io/tags/blog/</link>
+    <description>Recent content in Blog on Vlad Calin&#39;s personal page</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Sat, 07 Jan 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://vladcalin.github.io/tags/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Finally I made myself a blog</title>
+      <link>https://vladcalin.github.io/posts/finally-i-made-myself-a-blog/</link>
+      <pubDate>Sat, 07 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://vladcalin.github.io/posts/finally-i-made-myself-a-blog/</guid>
+      <description>There is no secret that having a blog is no big deal. Nowadays, everybody can create and host a blog with ease. So I though&amp;hellip; why shouldn&amp;rsquo;t I have a blog?
+I always wanted to write about different things that bug or incite me, write a couple of words about some interesting things I do or see other people do, offer some tips about the problems that every programmer once had, etc.</description>
+    </item>
+    
+  </channel>
+</rss>

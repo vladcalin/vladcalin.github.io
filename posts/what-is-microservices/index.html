@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<meta name="description" content="Calin Vlad&#39;s Blog">
+<meta name="keywords" content="blog,vlad,calin,python,thought,uaic,code,github">
+
+<base href="https://vladcalin.github.io">
+
+<title>Vlad Calin&#39;s personal page</title>
+
+<meta name="generator" content="Hugo 0.20.2" />
+
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400|Roboto+Slab:400,700|Roboto:300,300i,400,400i,500,500i,700,700i">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://vladcalin.github.io/css/main.css">
+
+
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="theme-color" content="#ffffff">
+
+</head>
+<body lang="en-US">
+<div class="container">
+
+
+<header class="row text-left title">
+  <h1 class="title">What is microservices?</h1>
+</header>
+<section id="category-pane" class="row meta">
+  
+  <div class="col-md-12">
+    <h6 class="text-left meta">
+      PUBLISHED ON FEB 02, 6027 
+      
+      
+      — 
+      
+      
+      <a class="meta" href="/categories/distibuted">DISTIBUTED</a>
+      
+      
+    </h6>
+  </div>
+  
+</section>
+<section id="content-pane" class="row">
+  <div class="col-md-12 text-justify content">
+    
+
+<p>The title is a reference to the famous <em>&ldquo;What is drugs?&rdquo;</em> news footage that is out there on the internet (if you don&rsquo;t know it, you can view it
+<a href="https://youtu.be/kan_FWhjrMw?t=37s">here</a>).</p>
+
+<p>So, what is microservice?</p>
+
+<p>I am sure that you heard this term and wondered why everybody is talking about it. What is it? What is it good for? What problems does this solve?</p>
+
+<p>In this article I am going to write a little about this phenomenon that is supposed to change the world (and currently does).</p>
+
+<h1 id="so-what-is-a-microservice">So, what is a microservice?</h1>
+
+<p>A microservice is&hellip; well&hellip; a service &hellip; that is small&hellip; and does things&hellip; and is webscale&hellip; and&hellip; whatever&hellip;.</p>
+
+<p>Joking aside, a microservice is a stand-alone service (application) that provides simple and independent functionality for a larger system. By simple and independent functionality I want to say that it is responsible in managing a single kind of information/entities (users, subscriptions, notifications, etc) or as fewer as possible.</p>
+
+<p>A larger system that is developed by using a microservice architecture is composed from a number of independent microservices that communicate with each other over the network. Such systems can be scaled (horizontaly) more easily, can handle failiures, does not need huge investments in performant hardware.</p>
+
+<p>With this architecture, there appear multiple problems that must be handled:</p>
+
+<ul>
+<li>how do these services communicate with each other? How does this affect performance? What happens when the network fails?</li>
+<li>how do these services find out about each other?</li>
+<li>with multiple instances of the same service, how can I balance the load more efficiently?</li>
+<li>how do I handle security?</li>
+<li>many others :(</li>
+</ul>
+
+<p>These questions are natural but they involve a broader discussion and I am not going to cover these aspects, at least not now.</p>
+
+<h1 id="what-is-it-good-for">What is it good for?</h1>
+
+<p>As I said earlier, the major advantage in this architectural design is that we can scale better and easier horizontally and we can handle failiure more efficiently.</p>
+
+<h2 id="scalability">Scalability</h2>
+
+<p>Having a single service instance that handles all the operations resulted from user requests, over time, becomes more stressed as more users come and they are more active. So the initial situation looks something like this: we have a single service that handles all the requests. You can check some benchmarks for your favourite web framework to see how many requests per second it can handle before having problems and cause some performance issues.</p>
+
+<h2 id="availability">Availability</h2>
+
+<p>Failure is handled in this manner: you have a number of instances of each service running. There are no two instances of the same service that run on the same node. In this case, let&rsquo;s assume that one node violently dies and everything on it stops working. You lose an instance of your service, but the other running instances can handle the requests that the dead one would normally handle! This is good news because all request are processed! And the chances that more nodes fail at the same time and leaves you with no running instance to handle the requests is very low.</p>
+
+<h2 id="independend-deployment">Independend deployment</h2>
+
+<p>Another advantage of the microservice pattern is that each service can be independently deployed. When a service needs to be updated, each instance can be updated at a time so that there will be no downtime, and also it is way faster than deploying a whole monolithic application. Of course, you have to be extra cautious to not screw up the communication between services as they need to continue to communicate with each other.</p>
+
+<h2 id="technologies">Technologies</h2>
+
+<p>Because microservies run independently and they only interact via some inter-process communication methods, there are no technological restrictions for each microservice. Each microservice an be written in whatever language you want and what technology stack you want to use. It is no problem. All that matters is that the communication protocol between microservices to be well documented and robust.</p>
+
+<h1 id="but-all-this-microservice-thing-is-too-hard">But all this microservice thing is too hard!</h1>
+
+<p>Of course, an application that is structured in microservices is harder to maintain than a traditional monolithic application. With the advantages this pattern comes with, of course there are some disadvantages.</p>
+
+<h2 id="devops-skills-required">DevOps skills required</h2>
+
+<p>In the traditional monolithic architecture is a single application, a single database, a single node and a few processes to monitor and manage. But in the microservice architecture, multiply it by the number of services and the number of nodes you have. There will be a lot of things to keep your eyes on and manage. Imagine that each microservice uses its own database, that is of different kind (one uses MySQL, one uses PostgreSQL, one uses MongoDB and so on) and some guys have to make sure that everything is working as expected.</p>
+
+<p>And as the application grows and more microservices are added and as more and more users use that application, there will be a lot more things to handle and things can go messy very easy.</p>
+
+<h2 id="latency">Latency</h2>
+
+<p>Because each microservice runs independently, eventually on multiple nodes, they need to communicate. What in the classic monolithic architecture every communication between two &ldquo;services&rdquo; are simple function calls, but in the microservice architecture, every call becomes a request (be it HTTP, message over AMQP, or some custom protocol over sockets). If a service takes more than a few microseconds to respond, that response time is added to the total response time of the original request and things can become messy: requests take too much time to get a response, the whole system lags, some service invokations might timeout and if they are not handled properly, there might occur some data loss, users get bored while they wait for the system to do its job, etcetera, etcetera.</p>
+
+<h1 id="conclusion">Conclusion</h1>
+
+<p>The microservice based architecture provides a method to develop applications that are very decoupled and can be easily scaled so that it fits our needs. But we must also be aware that this design also has flaws and, despite it advantages, we must think twice before using this pattern because it also comes with some flaws.</p>
+
+<p>I recommend taking a look over <a href="http://microservices.io/index.html">microservices.io</a> to read some more design patterns regarding this topic.</p>
+
+  </div>
+</section>
+<section id="tag-pane" class="row meta">
+  
+  <div class="col-md-12">
+    <h6 class="text-right meta">
+      
+      
+      TAGS: 
+      
+      
+      <a class="meta" href="/tags/microservices">MICROSERVICES</a>, 
+      
+      <a class="meta" href="/tags/thoughts">THOUGHTS</a>
+      
+      
+    </h6>
+  </div>
+  
+</section>
+
+
+
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'vladcalin-github-io';
+    var disqus_identifier = 'https:\/\/vladcalin.github.io\/posts\/what-is-microservices\/';
+    var disqus_title = 'What is microservices?';
+    var disqus_url = 'https:\/\/vladcalin.github.io\/posts\/what-is-microservices\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+<section id="menu-pane" class="row menu text-center">
+  
+  
+  <span><a class="menu-item" href="https://vladcalin.github.io/posts/what-every-python-project-should-have/">&lt; prev | </a></span>
+  
+  
+  <span><a class="menu-item" href="/posts">posts</a></span>
+  
+  
+  
+  <h4 class="text-center"><a class="menu-item" href="https://vladcalin.github.io">home</a></h4>
+</section>
+
+
+
+<footer class="row text-center footer">
+  <hr />
+  
+  <h6 class="text-center copyright">© 2017. Calin Stefan-Vlad. <a href="http://creativecommons.org/licenses/by/3.0/">Some Rights Reserved</a>.</h6>
+  
+  <h6 class="text-center powered">Powered by <a href="https://gohugo.io/">Hugo</a> &amp; <a href="https://github.com/shenoybr/hugo-goa">Goa</a>.</h6>
+  
+  
+</footer>
+
+</div>
+
+
+
+
+
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-82264971-2', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
+
+
