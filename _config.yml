@@ -79,7 +79,7 @@ analytics:
 author:
   name             : "Vlad Calin"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Writing code for food"
+  bio              : "Writing Python code for fun"
   location         : "Iasi, Romania"
   email            : "vlad.s.calin@gmail.com"
   uri              :
