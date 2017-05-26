@@ -107,12 +107,12 @@ The advantages are
 
 - No service discovery mechanism is needed because all services publish to and receive from
   a single service (or a cluster of services)
-- Reliable communication pattenr as it is used worldwide in large scale systems.
+- Reliable communication pattern as it is used worldwide in large scale systems.
 
 The main disadvantages are
 
 - Favors one-way communication. Request-response communication is harder to implement
-- The messages arrive might arrive in any order and even with delays.
+- The messages might arrive in any order and even with some signifiant delays.
 
 
 ### Conclusion
