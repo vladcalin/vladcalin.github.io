@@ -11,12 +11,12 @@ hot topics and improving myself continuously. I also enjoy reading about
 machine learning, artificial intelligence, information security and big data.
 
 I prefer to expand my knowledge horizontally, mainly because I don't consider
-that being expert in a certain technology is a must because technologies 
+that being expert in a certain technology is a must. I say this because technologies 
 appear and dissapear quickly as the industry evolves, and a programming 
-language is just a tool used to resolve a set of problems. 
+language or framework is just a tool used to resolve a set of problems. 
 
 I believe that having a good understanding on a broad range of topics can 
-help an individual see (and understand) the the broader picture and adapt accordingly. 
+help an individual see (and understand) the the big picture and adapt accordingly. 
 
 Very briefly, my skillset includes Python, Windows and Linux operating 
 systems knowledge, various RDBMS and NoSQL engines and Docker.
