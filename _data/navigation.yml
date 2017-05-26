@@ -4,5 +4,3 @@ main:
     url: "/about"
   - title: "Projects"
     url: "/projects"
-  - title: "Categories"
-    url: "/categories"
