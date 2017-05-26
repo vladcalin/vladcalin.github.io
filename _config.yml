@@ -78,7 +78,7 @@ analytics:
 # Site Author
 author:
   name             : "Vlad Calin"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           :  "/assets/img/vlad.jpg"
   bio              : "Writing Python code for fun"
   location         : "Iasi, Romania"
   email            : "vlad.s.calin@gmail.com"
