@@ -1,10 +1,7 @@
 ---
-layout: single
-title: About
+title: About myself
 permalink: /about/
 ---
-
-Hello world! 
 
 My name is Vlad Calin, I am a Python developer which is passionate about
 basically anything related to programming.
