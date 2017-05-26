@@ -1,5 +1,8 @@
 ---
 title: Communication between microservices
+categories:
+  - Microservices
+  - Thoughts
 ---
 
 With the new microservice based architecture that becomes more and more popular,
