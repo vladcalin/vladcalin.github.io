@@ -243,3 +243,11 @@ to 1384 ms, in comparison to the broader interval of 1096 - 1531 ms.
 
 Important to note that the alpine based container failed to deliver one
 response.
+
+## Conclusion and further work
+
+The conclusion is that there is a impact of how the server behaves under
+high load, although the difference is not that impressive. I will try to make
+benchmarks on the future that seem interesting, maybe test more web servers
+and/or more containerization solutions, who know what ideas will pop up in the
+future.
