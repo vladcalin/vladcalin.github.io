@@ -17,7 +17,7 @@ programming language or framework is just a tool used to resolve a set of
 problems.
 
 I believe that having a good understanding on a broad range of topics can
-help an individual see (and understand) the the big picture and adapt
+help an individual see (and understand) the big picture and adapt
 accordingly.
 
 Very briefly, my skill set includes Python, Windows and Linux operating
