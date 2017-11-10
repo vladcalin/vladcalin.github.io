@@ -32,8 +32,8 @@ However, the disadvantages might be:
 - limited by the verbs of the HTTP protocol. The CRUD opperations can be handled
   with ease, but when there are more specific actions to be handled, things can
   get messy
-- usual confussions cand make things easy as well (I have seen some APIs that
-  handled delete actions on GET, the POST vs PUT issue, etc)
+- usual confussion can make things go bad easy (I have seen some APIs that
+  handled state modifying actions on GET, the POST vs PUT issue, etc)
 
 
 ### JSON RPC
@@ -111,14 +111,18 @@ PUB-SUB mechanism from Redis.
 The advantages are
 
 - No service discovery mechanism is needed because all services publish to and
-  receive from a single service (or a cluster of services)
+  receive from a single service, the message broker (or a cluster of brokers)
 - Reliable communication pattern as it is used worldwide in large scale systems.
+- Asynchronous, no blocking requests. This property makes a system capable
+  of dealing with huge amounts of requests.
 
 The main disadvantages are
 
 - Favors one-way communication. Request-response communication is harder to
   implement
-- The messages might arrive in any order and even with some significant delays.
+- The messages might arrive in any order and even with some significant delays
+  (depending on the message transport implementation). But this should not be
+  a problem.
 
 
 ### Conclusion
