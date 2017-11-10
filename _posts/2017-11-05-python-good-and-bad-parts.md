@@ -1,5 +1,5 @@
 ---
-title: Python - the goods and the bad parts
+title: Python - the good and the bad parts
 category: Python
 ---
 
