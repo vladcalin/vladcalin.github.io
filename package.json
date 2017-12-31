@@ -1,34 +1,44 @@
 {
-  "name": "minimal-mistakes",
-  "version": "4.4.1",
-  "description": "Minimal Mistakes Jekyll theme npm build scripts",
+  "title": "Resume",
+  "name": "startbootstrap-resume",
+  "version": "4.0.0-beta.2",
+  "description": "Resume is a simple, yet elegant resume and CV theme for Bootstrap 4.",
+  "keywords": [
+    "css",
+    "sass",
+    "html",
+    "responsive",
+    "theme",
+    "template"
+  ],
+  "homepage": "https://startbootstrap.com/template-overviews/resume",
+  "bugs": {
+    "url": "https://github.com/BlackrockDigital/startbootstrap-resume/issues",
+    "email": "feedback@startbootstrap.com"
+  },
+  "license": "MIT",
+  "author": "Start Bootstrap",
+  "contributors": [
+    "David Miller (http://davidmiller.io/)"
+  ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/mmistakes/minimal-mistakes.git"
+    "url": "https://github.com/BlackrockDigital/startbootstrap-resume.git"
   },
-  "keywords": [
-    "jekyll",
-    "theme",
-    "minimal"
-  ],
-  "author": "Michael Rose",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/mmistakes/minimal-mistakes/issues"
-  },
-  "homepage": "https://mmistakes.github.io/minimal-mistakes/",
-  "engines": {
-    "node": ">= 0.10.0"
+  "dependencies": {
+    "bootstrap": "^4.0.0-beta.2",
+    "devicons": "^1.8.0",
+    "jquery": "^3.2.1",
+    "popper.js": "^1.12.6",
+    "simple-line-icons": "^2.4.1"
   },
   "devDependencies": {
-    "npm-run-all": "^1.7.0",
-    "onchange": "^2.2.0",
-    "uglify-js": "^2.6.1"
-  },
-  "scripts": {
-    "uglify": "uglifyjs assets/js/vendor/jquery/jquery-1.12.4.min.js assets/js/plugins/jquery.fitvids.js assets/js/plugins/jquery.greedy-navigation.js assets/js/plugins/jquery.magnific-popup.js assets/js/plugins/jquery.smooth-scroll.min.js assets/js/_main.js -c -m -o assets/js/main.min.js",
-    "add-banner": "node banner.js",
-    "watch:js": "onchange \"assets/js/**/*.js\" -e \"assets/js/main.min.js\" -- npm run build:js",
-    "build:js": "npm run uglify && npm run add-banner"
+    "browser-sync": "2.18.13",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "3.9.0",
+    "gulp-header": "1.8.9",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "3.0.0"
   }
 }
