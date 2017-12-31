@@ -1,4 +1,7 @@
 
-# npm_bin := $(shell npm bin)
+npm_bin := $(shell npm bin)
 build:
-	$(shell npm bin)/gulp
+	$(npm_bin)/gulp
+
+dev:
+	$(npm_bin)/gulp dev
